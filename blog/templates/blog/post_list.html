@@ -12,5 +12,14 @@
 	     <h2><a href="http://blog.naver.com/spark_bliss_universe">Pen & Marker's Blog</a></h2>
 	     <p>Visit Pen & Marker's blog. You may find fun and joy.</p>	
         </div>
+	
+	{% for post in posts %}
+	<div>
+	    <p>published: {{post.published_date}}</p>
+	    <h1><a href="">{{post.title}}</a></h1>
+	    <p>{{post.text|linebreaksbr}}</p>
+	</div> 
+ 	{% endfor %}
+
     </body>
 </html>
